@@ -97,37 +97,6 @@ resetButton.addEventListener("click", function(){
     document.getElementById("hint").innerHTML = "Try again!";
 });
 
-// below is all misc code that generated during testing
-/////////////////////////////////////////////////////////////
-// let guessList = document.getElementById("guesses");
-// let guessNum = guessList.getElementsByTagName("li");
-// for (let i = 0; i < guessNum.length; i++){
-//     guessNum[i].setAttribute()
-// }
-// let numGuess = document.querySelector("input").value;
-// let inputVal = document.querySelector("input");
-// inputVal.addEventListener("input", function(){
-//     numGuess = parseInt(numGuess);
-//     inputVal.checkValidity();
-// })
-
-// function numVal() {
-//         if (typeof numGuess == "number" && numGuess > 0 && numGuess < 100){
-//         return true;
-//     }
-// }
-
-// function numCheck() {
-//     if(numGuess > randomNum){
-//         document.getElementById("hint").innerHTML = "Too high";
-//     }
-//     if(numGuess < randomNum){
-//         document.getElementById("hint").innerHTML = "Too low";
-//     }
-//     if(numGuess == randomNum){
-//         document.getElementById("hint").innerHTML = "Got it!";
-//     }
-// }
 
 
 
