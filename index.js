@@ -1,12 +1,24 @@
 
 //generate a random number between 0-100
-let randomNum = Math.floor(Math.random() * 100);
+let randomNum = (Math.floor(Math.random() * 100) + 1);
 
 //define a variable to track the number of guesses
 let count = 0;
 
-//when button is pushed, check input number
+//check validity of input
+let numVal = document.getElementById('num');
 let goButton = document.getElementById("go");
+numVal.addEventListener('keyup', function (event) {
+    isValidNum = numVal.checkValidity();
+    //if the input is not valid, disable the "Go" button
+    if(isValidNum) {
+      goButton.disabled = false;
+    } else {
+      goButton.disabled = true;
+    }
+  });
+
+//when button is pushed, record input number & provide feedback
 goButton.addEventListener("click", function(){
     count++;
     if(count == 1){
