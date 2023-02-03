@@ -1,6 +1,7 @@
 
 //generate a random number between 0-100
 let randomNum = (Math.floor(Math.random() * 100) + 1);
+console.log(randomNum);
 
 //define a variable to track the number of guesses
 let count = 0;
