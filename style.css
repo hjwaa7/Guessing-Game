@@ -1,15 +1,16 @@
 body{
     font-family: Arial;
-    background-color: lightgray;
+    background-color: #845EC2;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    color: black;
 }
 
 .game {
-    background-color: whitesmoke;
-    border: 2px solid black;
+    background-color: #845EC2;
+    border: 2px solid #845EC2;
     padding: 20px;
     width: 80%;
 }
@@ -18,13 +19,14 @@ li {
     list-style-type: none;
     width: 50px;
     height: 50px;
-    background-color: lightgray;
+    background-color: #00C9A7;
     border: 1px solid black;
     border-radius: 10px;
     margin: 10px;
     vertical-align: middle;
     padding-top: 30px;
     padding-bottom: 0px;
+    box-shadow: 5px 5px;
 }
 
 ul {
@@ -43,21 +45,27 @@ input {
     display: flex;
     justify-content: center;
     text-align: center;
+    border: 3px solid black;
+    border-radius: 20px;
+    color: black;
 }
 
 button {
     display: inline;
     text-align: center;
     width: 100px;
-    background-color: lightblue;
+    background-color: #00C9A7;
     margin: 10px;
+    border: 1px solid black;
     border-radius: 20px;
+    color: black;
+    box-shadow: 5px 5px;
 }
 
 #hint {
     margin: 30px;
     font-weight: bold;
-    background-color: yellow;
+    background-color: #FBEAFF;
 }
 
 #win {
@@ -74,8 +82,12 @@ button {
 
 h1 {
     text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #00C9A7;
+    font-size: xxx-large;
 }
 
 p {
     text-align: center;
 }
+

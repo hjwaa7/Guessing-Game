@@ -18,72 +18,42 @@ numVal.addEventListener('keyup', function (event) {
     }
   });
 
+//function to provide feedback
+function checkNum(numGuess) {
+    if(numGuess > randomNum){
+        document.getElementById("hint").innerHTML = "Too high";
+        document.querySelector("input").value = "";
+    }
+    if(numGuess < randomNum){
+        document.getElementById("hint").innerHTML = "Too low";
+        document.querySelector("input").value = "";
+    }
+    if(numGuess == randomNum){
+        document.getElementById("hint").innerHTML = "Got it!";
+        showImage();
+    }
+
+}
+
 //when button is pushed, record input number & provide feedback
 goButton.addEventListener("click", function(){
     count++;
+    let numGuess = document.querySelector("input").value;
     if(count == 1){
-        let firstGuess = document.querySelector("input").value;
-        document.getElementById("guessOne").innerHTML = firstGuess;
-        if(firstGuess > randomNum){
-            document.getElementById("hint").innerHTML = "Too high";
-            document.querySelector("input").value = "";
-        }
-        if(firstGuess < randomNum){
-            document.getElementById("hint").innerHTML = "Too low";
-            document.querySelector("input").value = "";
-        }
-        if(firstGuess == randomNum){
-            document.getElementById("hint").innerHTML = "Got it!";
-            showImage();
-        }
+        checkNum(numGuess);
+        document.getElementById("guessOne").innerHTML = numGuess;
     }
     if(count == 2){
-        let secondGuess = document.querySelector("input").value;
-        document.getElementById("guessTwo").innerHTML = secondGuess;
-        if(secondGuess > randomNum){
-            document.getElementById("hint").innerHTML = "Too high";
-            document.querySelector("input").value = "";
-        }
-        if(secondGuess < randomNum){
-            document.getElementById("hint").innerHTML = "Too low";
-            document.querySelector("input").value = "";
-        }
-        if(secondGuess == randomNum){
-            document.getElementById("hint").innerHTML = "Got it!";
-            showImage();
-        }
+        checkNum(numGuess);
+        document.getElementById("guessTwo").innerHTML = numGuess;
     }
     if(count == 3){
-        let thirdGuess = document.querySelector("input").value;
-        document.getElementById("guessThree").innerHTML = thirdGuess;
-        if(thirdGuess > randomNum){
-            document.getElementById("hint").innerHTML = "Too high";
-            document.querySelector("input").value = "";
-        }
-        if(thirdGuess < randomNum){
-            document.getElementById("hint").innerHTML = "Too low";
-            document.querySelector("input").value = "";
-        }
-        if(thirdGuess == randomNum){
-            document.getElementById("hint").innerHTML = "Got it!";
-            showImage();
-        }
+        checkNum(numGuess);
+        document.getElementById("guessThree").innerHTML = numGuess;
     }
     if(count == 4){
-        let fourthGuess = document.querySelector("input").value;
-        document.getElementById("guessFour").innerHTML = fourthGuess;
-        if(fourthGuess > randomNum){
-            document.getElementById("hint").innerHTML = "Too high";
-            document.querySelector("input").value = "";
-        }
-        if(fourthGuess < randomNum){
-            document.getElementById("hint").innerHTML = "Too low";
-            document.querySelector("input").value = "";
-        }
-        if(fourthGuess == randomNum){
-            document.getElementById("hint").innerHTML = "Got it!";
-            showImage();
-        }
+        checkNum(numGuess);
+        document.getElementById("guessFour").innerHTML = numGuess;
     }
     if(count == 5){
         let fifthGuess = document.querySelector("input").value;
