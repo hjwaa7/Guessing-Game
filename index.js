@@ -26,9 +26,11 @@ goButton.addEventListener("click", function(){
         document.getElementById("guessOne").innerHTML = firstGuess;
         if(firstGuess > randomNum){
             document.getElementById("hint").innerHTML = "Too high";
+            document.querySelector("input").value = "";
         }
         if(firstGuess < randomNum){
             document.getElementById("hint").innerHTML = "Too low";
+            document.querySelector("input").value = "";
         }
         if(firstGuess == randomNum){
             document.getElementById("hint").innerHTML = "Got it!";
@@ -40,9 +42,11 @@ goButton.addEventListener("click", function(){
         document.getElementById("guessTwo").innerHTML = secondGuess;
         if(secondGuess > randomNum){
             document.getElementById("hint").innerHTML = "Too high";
+            document.querySelector("input").value = "";
         }
         if(secondGuess < randomNum){
             document.getElementById("hint").innerHTML = "Too low";
+            document.querySelector("input").value = "";
         }
         if(secondGuess == randomNum){
             document.getElementById("hint").innerHTML = "Got it!";
@@ -54,9 +58,11 @@ goButton.addEventListener("click", function(){
         document.getElementById("guessThree").innerHTML = thirdGuess;
         if(thirdGuess > randomNum){
             document.getElementById("hint").innerHTML = "Too high";
+            document.querySelector("input").value = "";
         }
         if(thirdGuess < randomNum){
             document.getElementById("hint").innerHTML = "Too low";
+            document.querySelector("input").value = "";
         }
         if(thirdGuess == randomNum){
             document.getElementById("hint").innerHTML = "Got it!";
@@ -68,9 +74,11 @@ goButton.addEventListener("click", function(){
         document.getElementById("guessFour").innerHTML = fourthGuess;
         if(fourthGuess > randomNum){
             document.getElementById("hint").innerHTML = "Too high";
+            document.querySelector("input").value = "";
         }
         if(fourthGuess < randomNum){
             document.getElementById("hint").innerHTML = "Too low";
+            document.querySelector("input").value = "";
         }
         if(fourthGuess == randomNum){
             document.getElementById("hint").innerHTML = "Got it!";
@@ -82,6 +90,7 @@ goButton.addEventListener("click", function(){
         document.getElementById("guessFive").innerHTML = fifthGuess;
         if(fifthGuess !== randomNum){
             document.getElementById("hint").innerHTML = `The correct answer is ${randomNum}. Reset to try again.`;
+            document.querySelector("input").value = "";
         }
         if(fifthGuess == randomNum){
             document.getElementById("hint").innerHTML = "Got it!";
@@ -99,6 +108,7 @@ function showImage() {
 //reset button
 let resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", function(){
+    randomNum = (Math.floor(Math.random() * 100) + 1);
     document.getElementById("guessOne").innerHTML = "-";
     document.getElementById("guessTwo").innerHTML = "-";
     document.getElementById("guessThree").innerHTML = "-";
@@ -107,6 +117,7 @@ resetButton.addEventListener("click", function(){
     document.getElementById('trophy').style.visibility = "hidden";
     count = 0;
     document.getElementById("hint").innerHTML = "Try again!";
+    document.querySelector("input").value = "";
 });
 
 

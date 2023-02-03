@@ -54,21 +54,6 @@ button {
     border-radius: 20px;
 }
 
-/* #go{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-}
-
-#reset{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
-} */
-
-
 #hint {
     margin: 30px;
     font-weight: bold;
@@ -81,6 +66,9 @@ button {
 }
 
 #trophy {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     visibility: hidden;
 }
 
